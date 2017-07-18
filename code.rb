@@ -508,20 +508,3 @@ puts "\n"
 puts "Which users have a location listed in twitter_data?"
 hasData("location")
 puts "\n"
-
-def mostTwitter(targetData)
-  most = 0
-  winner = ""
-  twitter_data.each_with_index do |data, index|
-    data.each_key do |key|
-      if twitter_data[index][key][targetData] > most
-        most = twitter_data[index][key][targetData]
-        winner = "#{key}"
-      end
-    end
-  end
-  puts winner
-end
-mostTwitter("number of friends")
-
-puts twitter_data[0][“LaunchAcademy”][“number of followers”]
